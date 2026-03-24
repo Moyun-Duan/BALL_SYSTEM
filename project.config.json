@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "ball_system",
+  "description": "约球系统是一款专为在校大学生设计的运动社交工具，通过在线搜索、匹配和场地预约，帮助用户快速找到球友并约场，让运动更简单、更快乐。",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
