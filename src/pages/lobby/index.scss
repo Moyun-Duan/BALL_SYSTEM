@@ -1,0 +1,151 @@
+.lobby-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-light);
+  position: relative;
+}
+
+.header {
+  background-color: #fff;
+  padding: var(--spacing-sm) var(--spacing-md);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.search-bar {
+  background-color: #f0f0f0;
+  border-radius: var(--radius-lg);
+  padding: 8px 12px;
+  margin-bottom: var(--spacing-sm);
+
+  .search-input {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.tags-scroll {
+  white-space: nowrap;
+  padding-bottom: 4px;
+  
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #f5f5f5;
+    border-radius: var(--radius-lg);
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-right: 8px;
+    border: 1px solid transparent;
+
+    &.active {
+      background-color: var(--color-primary-bg);
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      font-weight: 500;
+    }
+  }
+}
+
+.room-list {
+  flex: 1;
+  padding: var(--spacing-md);
+  box-sizing: border-box; 
+  /* Important for padding inside scrollView */
+}
+
+.room-card {
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    
+    .sport-tag {
+      font-size: 12px;
+      color: #fff;
+      background-color: var(--color-primary);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    .room-title {
+      font-size: 16px;
+      font-weight: bold;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .status-badge {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      
+      &.open {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .card-body {
+    .info-row {
+      display: flex;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-bottom: 4px;
+
+      .label {
+        width: 45px;
+        color: #999;
+      }
+      
+      .gender-limit {
+        margin-left: 8px;
+        color: var(--color-orange); 
+      }
+    }
+  }
+
+  .card-footer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--color-border);
+    
+    .mini-tag {
+      font-size: 10px;
+      color: var(--color-blue);
+      background-color: var(--color-blue-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 6px;
+    }
+  }
+}
+
+.list-bottom-spacer {
+  height: 80px; /* Space for FAB or TabBar */
+}
+
+.fab-create {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(34, 181, 175, 0.4);
+  z-index: 100;
+
+  .plus {
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    margin-top: -4px;
+  }
+}
