@@ -1,3 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '房间详情'
+  navigationBarTitleText: '组队详情',
+  navigationBarBackgroundColor: '#ffffff'
 })

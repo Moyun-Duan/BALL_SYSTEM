@@ -6,6 +6,13 @@ export interface User {
   bio?: string;
   stamina?: number; // 体力/信誉分等
   tags?: string[]; // 个人标签：学园/院系/社团/水平/风格
+  college?: string;
+  department?: string;
+  club?: string;
+  styleLabel?: string;
+  avatarTheme?: 'cyan' | 'orange' | 'yellow' | 'blue';
+  badmintonPartnerCode?: string;
+  tennisPartnerCode?: string;
 }
 
 export interface SportType {
@@ -39,6 +46,13 @@ export interface Room {
   status: 'open' | 'full' | 'playing' | 'finished' | 'cancelled';
   members: User[];
   isPrivate?: boolean; // 公开性设置
+  joinMode?: 'direct' | 'approval';
+  inviteCode?: string;
+  organizationLabel?: string;
+  skillLabel?: string;
+  atmosphereLabel?: string;
+  partnerCodeRequired?: boolean;
+  partnerCode?: string;
 }
 
 // 搜索/筛选参数接口

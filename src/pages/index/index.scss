@@ -1,0 +1,22 @@
+.landing-card {
+  display: block;
+}
+
+.landing-card__code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  color: var(--color-black);
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  background: var(--color-surface-muted);
+  border-radius: 50%;
+}
+
+.landing-button {
+  margin-top: 8px;
+}

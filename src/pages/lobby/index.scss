@@ -1,151 +1,220 @@
-.lobby-container {
-  height: 100vh;
+.lobby-hero__metrics {
+  margin-top: 18px;
+}
+
+.search-card__copy {
+  margin-top: 8px;
+}
+
+.search-toolbar {
   display: flex;
-  flex-direction: column;
-  background-color: var(--color-bg-light);
-  position: relative;
+  align-items: center;
+  margin-top: 18px;
 }
 
-.header {
-  background-color: #fff;
-  padding: var(--spacing-sm) var(--spacing-md);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  z-index: 10;
-}
-
-.search-bar {
-  background-color: #f0f0f0;
-  border-radius: var(--radius-lg);
-  padding: 8px 12px;
-  margin-bottom: var(--spacing-sm);
-
-  .search-input {
-    font-size: 14px;
-    width: 100%;
-  }
-}
-
-.tags-scroll {
-  white-space: nowrap;
-  padding-bottom: 4px;
-  
-  .tag {
-    display: inline-block;
-    padding: 4px 12px;
-    background-color: #f5f5f5;
-    border-radius: var(--radius-lg);
-    font-size: 13px;
-    color: var(--color-text-secondary);
-    margin-right: 8px;
-    border: 1px solid transparent;
-
-    &.active {
-      background-color: var(--color-primary-bg);
-      color: var(--color-primary);
-      border-color: var(--color-primary);
-      font-weight: 500;
-    }
-  }
-}
-
-.room-list {
+.search-composer {
+  display: flex;
+  align-items: center;
   flex: 1;
-  padding: var(--spacing-md);
-  box-sizing: border-box; 
-  /* Important for padding inside scrollView */
+  min-width: 0;
+  padding: 6px;
+  background: var(--color-gray-3);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
 }
 
-.room-card {
-  .card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    
-    .sport-tag {
-      font-size: 12px;
-      color: #fff;
-      background-color: var(--color-primary);
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-right: 8px;
-    }
-
-    .room-title {
-      font-size: 16px;
-      font-weight: bold;
-      flex: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .status-badge {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      
-      &.open {
-        color: var(--color-primary);
-      }
-    }
-  }
-
-  .card-body {
-    .info-row {
-      display: flex;
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      margin-bottom: 4px;
-
-      .label {
-        width: 45px;
-        color: #999;
-      }
-      
-      .gender-limit {
-        margin-left: 8px;
-        color: var(--color-orange); 
-      }
-    }
-  }
-
-  .card-footer {
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px dashed var(--color-border);
-    
-    .mini-tag {
-      font-size: 10px;
-      color: var(--color-blue);
-      background-color: var(--color-blue-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-right: 6px;
-    }
-  }
+.search-composer__input {
+  flex: 1;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 32px;
 }
 
-.list-bottom-spacer {
-  height: 80px; /* Space for FAB or TabBar */
-}
-
-.fab-create {
-  position: absolute;
-  bottom: 40px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
+.search-composer__submit {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(34, 181, 175, 0.4);
-  z-index: 100;
+  width: 72px;
+  height: 32px;
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
 
-  .plus {
-    color: white;
-    font-size: 32px;
-    line-height: 1;
-    margin-top: -4px;
+.invite-toggle {
+  flex-shrink: 0;
+  margin-left: 10px;
+  padding: 0 16px;
+  color: var(--color-primary);
+  font-size: 13px;
+  line-height: 44px;
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-pill);
+}
+
+.invite-box {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  margin-top: 14px;
+  background: var(--color-gray-3);
+  border-radius: 18px;
+}
+
+.invite-box__input {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+}
+
+.invite-box__button {
+  flex-shrink: 0;
+  width: 104px;
+  margin-left: 10px;
+}
+
+.tag-strip {
+  margin-top: 16px;
+  white-space: nowrap;
+}
+
+.tag-strip__inner {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  margin-right: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  background: var(--color-gray-3);
+  border-radius: var(--radius-pill);
+}
+
+.tag-pill--active {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.search-result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.search-result-head__actions {
+  display: flex;
+  align-items: center;
+}
+
+.link-action {
+  margin-left: 14px;
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+.lobby-list {
+  padding-bottom: 10px;
+}
+
+.room-row {
+  padding: 18px;
+}
+
+.room-row__header {
+  display: flex;
+  align-items: center;
+}
+
+.room-row__main {
+  flex: 1;
+  min-width: 0;
+  margin: 0 12px;
+}
+
+.room-row__host {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-gray-4);
+  font-size: 12px;
+}
+
+.room-row__title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.room-row__meta {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.room-row__join {
+  flex-shrink: 0;
+  width: 96px;
+}
+
+.room-row__chips {
+  margin-top: 14px;
+}
+
+.room-row__detail {
+  margin-top: 10px;
+}
+
+.lobby-create-button {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+@media screen and (max-width: 640px) {
+  .search-toolbar {
+    display: block;
+  }
+
+  .invite-toggle {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .invite-box {
+    display: block;
+  }
+
+  .invite-box__button {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .room-row__header {
+    align-items: flex-start;
+  }
+
+  .room-row__join {
+    width: 82px;
+    font-size: 13px;
   }
 }

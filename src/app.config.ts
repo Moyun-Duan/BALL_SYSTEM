@@ -8,14 +8,14 @@ export default defineAppConfig({
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    navigationBarBackgroundColor: '#ffffff',
     navigationBarTitleText: '约球系统',
     navigationBarTextStyle: 'black'
   },
   tabBar: {
-    color: '#999',
+    color: '#94959B',
     selectedColor: '#22B5AF',
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     borderStyle: 'white',
     list: [
       {
